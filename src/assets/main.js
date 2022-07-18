@@ -41,7 +41,7 @@ async function fetchData(urlApi){
           </h3>
         </div>
       </div>
-        `).slice(0,4).join('')} <!--para iterar solo 4 videos-->
+        `).slice(0,8).join('')} <!--para iterar solo 4 videos-->
             
         `;
         content.innerHTML = view;
