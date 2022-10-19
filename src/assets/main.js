@@ -1,4 +1,5 @@
-const API = `https://youtube-v31.p.rapidapi.com/search?channelId=UCMebXsaxWdvBzBNwus7TmxA&part=snippet%2Cid&order=date&maxResults=9`;
+
+const API = `https://youtube-v31.p.rapidapi.com/search?channelId=UClEbp8JDwEkb369Eu2Ltk2Q&part=snippet%2Cid&order=date&maxResults=9`;
 
 //aqui agregaremos la iteracion de cada elemento(referencia)
 const content = null || document.getElementById('content');
