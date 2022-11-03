@@ -7,6 +7,40 @@
   <script type="text/javascript" src="assets/crisp.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="./assets/main.js"></script>
+  <script>
+
+
+    $crisp.push(["on", "message:compose:sent", newSegment ])
+    function newSegment(){
+      $crisp.push(["set", "session:segments", [["chat_bemaster_soporte"], true]]);
+    } 
+    $crisp.push(["on", "chat:opened", btnrmv])
+    $crisp.push(["on", "message:received", btnrmv])
+  function btnrmv(){
+    const emailbtn = document.querySelector('[data-channel="email"]');
+            emailbtn.remove();}
+
+
+  </script>
+  <script>
+    function toggleChat() {
+    var element = document.getElementById("mySidenav");
+    if (element.classList == "chat") {
+      $crisp.push(["do", "chat:close"])
+    } else {
+
+        $crisp.push(["do", "chat:open"])
+    }
+}
+  $crisp.push(["do", "chat:close"])
+  setTimeout(() => {
+    const crispObj = document.querySelector("[href='https://client.crisp.chat/static/stylesheets/client_default.css?765735d']");
+    console.log(crispObj);
+    crispObj.remove();
+  console.log("Delayed for 1 second.");
+  }, "5000")</script>
+ 
+  <link href="styles/styles.css" type="text/css" rel="stylesheet">  
 </head>
 
 <style>a.cc-xlt7.cc-25ir.cc-12pv[data-channel="email"] {
@@ -18,9 +52,15 @@ a.cc-xlt7.cc-25ir.cc-12pv[data-channel="spotlight"] {
   a.cc-52lo.cc-kegp.cc-1oun.cc-1qth {
 
     display: none !important;
-  }</style>
+  }
+   .cc-1apq {
 
+     width: 700px !important;
+   }</style>
+  
 <body>
+ 
+
   <div class="relative bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
@@ -53,6 +93,23 @@ a.cc-xlt7.cc-25ir.cc-12pv[data-channel="spotlight"] {
             <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
               <span class="block xl:inline">Elian Hernandez</span>
               <span class="block text-indigo-600 xl:inline">@1eliaaan</span>
+              <div id="mySidenav" class="chat" onclick="this.classList.toggle('active'); toggleChat();" >
+                <div class="background"></div>
+                <svg class="chat-bubble" width="100" height="100" viewBox="0 0 100 100">
+                  <g class="bubble">
+                    <path class="line line1" d="M 30.7873,85.113394 30.7873,46.556405 C 30.7873,41.101961
+                    36.826342,35.342 40.898074,35.342 H 59.113981 C 63.73287,35.342
+                    69.29995,40.103201 69.29995,46.784744" />
+                    <path class="line line2" d="M 13.461999,65.039335 H 58.028684 C
+                      63.483128,65.039335
+                      69.243089,59.000293 69.243089,54.928561 V 45.605853 C
+                      69.243089,40.986964 65.02087,35.419884 58.339327,35.419884" />
+                  </g>
+                  <circle class="circle circle1" r="1.9" cy="50.7" cx="42.5" />
+                  <circle class="circle circle2" cx="49.9" cy="50.7" r="1.9" />
+                  <circle class="circle circle3" r="1.9" cy="50.7" cx="57.3" />
+                </svg>
+              </div>
             </h1>
             <p
               class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
@@ -112,7 +169,7 @@ a.cc-xlt7.cc-25ir.cc-12pv[data-channel="spotlight"] {
       </div>
     </div>
   </div>
-  
+
 </body>
 
 </html>

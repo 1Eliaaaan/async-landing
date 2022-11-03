@@ -4,9 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="ad6db3a0-f0de-4022-8883-4d5fe4ff980e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+  <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="ad6db3a0-f0de-4022-8883-4d5fe4ff980e";(async function(){d=document;s=d.createElement("script");s.src="assets/maincrisp.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
  
- <script>$crisp.push(["set", "session:segments", [["chat_bemaster_soporte"]]]);</script>
+  <script>
+    function msg(){
+      console.log("Sesion iniciada");
+    }
+    $crisp.push(["on", "session:loaded", msg])
+
+
+  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="./assets/main.js"></script>
