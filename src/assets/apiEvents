@@ -1,0 +1,32 @@
+   $crisp.push(["on", "session:loaded", checkSegment])
+
+                                        function checkSegment(){
+                                    
+                                           /* switch (tutorSegment) {
+                                                case 'elian' : 
+                                                */
+                                               console.log("Hola");
+                                            }
+                                        
+
+                                             
+                                            <styles>
+
+                                                .bemasterbtn {
+                                                    margin-top: 19px !important;
+                                                    text-align: center !important;
+                                                    /* margin: auto !important; */
+                                                    width: -22px!important;
+                                                    /* height: 28px!important; */
+                                                    /* top: 58px!important; */
+                                                    /* left: 162px!important; */
+                                                    /* right: 21px !important; */
+                                                    display: inline-block !important;
+                                                    /* font-size: 20px !important; */
+                                                    margin-left: 40px !important;
+                                                    text-color: red !important;
+                                                    color: #b98e51 !important;
+                                                }
+                                                }
+                                
+                                            </styles>
