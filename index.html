@@ -32,15 +32,15 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-   function onLogin(){
-     FB.login(response) => {
-       if(response.authResponse) {
-         FB.api('/me?fields=email,name,picture', (response) => {
-           console.log(response);
-         })
-       }
-     }
-   }
+function onLogin(){
+    FB.login((response) => {
+      if(response.authResponse) {
+        FB.api('/me?fields=email,name,picture', (response) => {
+          console.log(response);
+            })
+        }
+    }
+  )}
 </script>
  <button onClick="onLogin();">Iniciar Sesion</button>
 
